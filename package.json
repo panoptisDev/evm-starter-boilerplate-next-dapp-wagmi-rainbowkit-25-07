@@ -1,7 +1,10 @@
 {
-  "name": "next-vibe-coding-evm-starter",
+  "name": "evm-starter",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.19.2"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "bun run format && bun run lint && next build",
@@ -24,7 +27,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.2.0",
-    "viem": "2.x",
+    "viem": "2.31.6",
     "wagmi": "^2.15.6"
   },
   "devDependencies": {

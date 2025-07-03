@@ -1,4 +1,5 @@
-# Next Vibe Coding EVM Starter
+# PanoptisDev EVM Starter
+![Image description](./public/dappstarter.png)
 
 A modern and opinionated Next.js starter template for EVM-based Web3 applications with internationalization support and best development practices preconfigured.
 
@@ -38,11 +39,15 @@ A modern and opinionated Next.js starter template for EVM-based Web3 application
 ## 🏁 Getting Started
 
 ### Installation
-
+   ```bash
+   nvm use 20.19.2
+   yarn install
+   yarn dev
+   ```
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/next-vibe-coding-evm-starter.git
-   cd next-vibe-coding-evm-starter
+   git clone https://github.com/panoptisDev/evm-starter-boilerplate-next-dapp-wagmi-rainbowkit-25-07.git
+   cd evm-starter-boilerplate-next-dapp-wagmi-rainbowkit-25-07
    ```
 
 2. **Install dependencies:**
@@ -73,27 +78,36 @@ A modern and opinionated Next.js starter template for EVM-based Web3 application
 ```
 src/
 ├── app/
-│   └── [locale]/          # Internationalized routes
-│       ├── layout.tsx     # Root layout with Web3 providers
-│       └── page.tsx       # Homepage with wallet connection
+│   └── [locale]/              # Internationalized routes
+│       ├── layout.tsx         # Root layout with i18n provider
+│       ├── page.tsx           # Landing page with hero section
+│       └── dapp/              # DApp section
+│           ├── layout.tsx     # DApp layout with Web3 providers
+│           └── page.tsx       # DApp page with wallet connection
 ├── components/
-│   ├── ui/               # shadcn/ui components
-│   ├── toggle-language.tsx  # Language switcher
-│   └── web3-privoder.tsx    # Web3 context provider
+│   ├── ui/                    # shadcn/ui components
+│   │   └── dropdown-menu.tsx  # Dropdown menu component
+│   ├── wed/                   # Custom UI components
+│   │   └── button.tsx         # Custom button component
+│   ├── navbar.tsx             # Main navigation bar (with Web3)
+│   ├── landing-navbar.tsx     # Landing page navbar (without Web3)
+│   ├── client-web3-provider.tsx # Client-side Web3 provider wrapper
+│   ├── web3-provider.tsx      # Web3 context provider
+│   └── toggle-language.tsx    # Language switcher component
 ├── hooks/
-│   └── use-ripple.ts     # Custom hooks
+│   └── use-ripple.ts          # Custom ripple effect hook
 ├── lib/
-│   └── utils.ts          # Utility functions
+│   └── utils.ts               # Utility functions and class merging
 ├── locales/
-│   ├── client.ts         # Client-side i18n
-│   ├── server.ts         # Server-side i18n
-│   ├── index.ts          # i18n configuration
-│   └── languages/        # Translation files
-│       ├── en-US.ts      # English translations
-│       └── zh-CN.ts      # Chinese translations
+│   ├── client.ts              # Client-side i18n configuration
+│   ├── server.ts              # Server-side i18n configuration
+│   ├── index.ts               # i18n utilities and locale helpers
+│   └── languages/             # Translation files
+│       ├── en-US.ts           # English translations
+│       └── zh-CN.ts           # Chinese translations
 ├── styles/
-│   └── globals.css       # Global styles
-└── middleware.ts         # i18n middleware
+│   └── globals.css            # Global styles and Tailwind imports
+└── middleware.ts              # i18n routing middleware
 ```
 
 ## 🔧 Available Scripts
